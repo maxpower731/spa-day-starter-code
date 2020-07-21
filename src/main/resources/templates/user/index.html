@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+
+<a href="../">Come home</a>
+<p th:if="${error}" th:text="${error}"></p>
+<p th:unless="${error}" th:text="'Hello ' + ${user.username}"></p>
+
+</body>
+</html>
