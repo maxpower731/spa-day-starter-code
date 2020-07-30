@@ -7,6 +7,20 @@
 <body>
 
 <a th:href = "@{/}">Index</a>
+<a th:href = "@{/user/add}">Add User</a>
+
+<table>
+    <thead>
+        <th>Username</th>
+    </thead>
+    <th:block th:each = "user : ${users}">
+        <tr>
+            <td>
+                <a th:href="@{user/userDetail/{id}(id=${user.getId()})}" th:text = "${user.getUsername()}"></a>
+            </td>
+        </tr>
+    </th:block>
+</table>
 
 </body>
 </html>
